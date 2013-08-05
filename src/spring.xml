@@ -4,6 +4,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="duke" class="com.springBeans.Juggler"/>
-
+	
+	<bean id="duke" class="com.springBeans.Juggler">
+		<constructor-arg value="15"/>
+	</bean>
+	
+	<bean id="sonet" class="com.springBeans.Sonet"/>
+	
+	<bean id="poeticJuggler" class="com.springBeans.PoeticJuggler">
+		<constructor-arg value="15" />
+		<constructor-arg ref="sonet" />
+	</bean>
+ 
 </beans>
