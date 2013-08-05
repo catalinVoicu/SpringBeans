@@ -13,6 +13,17 @@ public class MainSpring {
 		
 		Poem sonet = new Sonet();
 		Performer duke = new PoeticJuggler(15, sonet );
+		
+		Performer kenny = (Performer) ctx.getBean("kenny2");
+		
+
+		try {
+			kenny.perform();
+		} catch (PerformanceException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
+		/*
 		try {
 			duke.perform();
 		} catch (PerformanceException e1) {
@@ -24,7 +35,7 @@ public class MainSpring {
 		} catch (PerformanceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 }

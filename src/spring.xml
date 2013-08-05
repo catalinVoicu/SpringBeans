@@ -2,7 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-init-method="turnOnLLights"
+	default-destroy-method="turnOffLights">
 
 	
 	<bean id="duke" class="com.springBeans.Juggler">
@@ -15,5 +17,28 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		<constructor-arg value="15" />
 		<constructor-arg ref="sonet" />
 	</bean>
- 
+	
+	<bean id="theStage"
+		class="com.springBeans.Stage"
+		factory-method="getStage" />
+		
+	<bean id="ticket" class="com.springBeans.Ticket"
+		scope="prototype" />
+		
+	<bean id="auditorium"
+		class="com.springBeans.Auditorium"
+		init-method="turnOnLights"
+		destroy-method="turnOffLights"/>
+		
+	<bean id="kenny" class="com.springBeans.Instrumentalist">
+		<property name="song" value="Jingle Bells" />
+	</bean>
+	
+	<bean id="saxophone" class="com.springBeans.Saxophone" />
+	
+	<bean id="kenny2" class="com.springBeans.Instrumentalist" >
+		<property name="song" value="Kenny song" />
+		<property name="instrument" ref="saxophone" />
+	</bean>
+  
 </beans>

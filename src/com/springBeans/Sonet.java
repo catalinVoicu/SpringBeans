@@ -25,7 +25,7 @@ public class Sonet implements Poem{
 	@Override
 	public void recite() {
 		
-		for( int i = 0; i <= LINES.length; i++ ) {
+		for( int i = 0; i < LINES.length; i++ ) {
 			System.out.println(LINES[i]);
 		}
 
