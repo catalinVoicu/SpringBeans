@@ -1,5 +1,7 @@
 package com.springBeans;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,6 +17,10 @@ public class MainSpring {
 		Performer duke = new PoeticJuggler(15, sonet );
 		
 		Performer kenny = (Performer) ctx.getBean("pianoPlayer");
+		
+		List cities = (List) ctx.getBean("cities");
+		
+		System.out.println(cities);
 		
 
 		try {

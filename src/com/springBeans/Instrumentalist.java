@@ -1,10 +1,13 @@
 package com.springBeans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Instrumentalist implements Performer {
 
 	private String song;
 	private Instrument instrument;
 	
+	@Autowired
 	public Instrumentalist() {	
 	}
 	
@@ -24,6 +27,7 @@ public class Instrumentalist implements Performer {
 		return song;
 	}
 	
+
 	public void setInstrument ( Instrument instrument ) {
 		this.instrument = instrument;
 	}
