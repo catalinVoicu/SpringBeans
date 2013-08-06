@@ -14,7 +14,7 @@ public class MainSpring {
 		Poem sonet = new Sonet();
 		Performer duke = new PoeticJuggler(15, sonet );
 		
-		Performer kenny = (Performer) ctx.getBean("kenny2");
+		Performer kenny = (Performer) ctx.getBean("pianoPlayer");
 		
 
 		try {
