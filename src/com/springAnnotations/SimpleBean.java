@@ -32,6 +32,6 @@ public class SimpleBean {
 	}
 	
 	public String toString() {
-		return "Name: " + name + "\nAge " + age;s 
+		return "Name: " + name + "\nAge " + age; 
 	}
 }
