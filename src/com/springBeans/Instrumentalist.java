@@ -27,7 +27,7 @@ public class Instrumentalist implements Performer {
 		return song;
 	}
 	
-
+	@Autowired
 	public void setInstrument ( Instrument instrument ) {
 		this.instrument = instrument;
 	}

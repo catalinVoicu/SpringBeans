@@ -2,7 +2,9 @@ package com.springBeans;
 
 import java.util.List;
 
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.expression.BeanFactoryAccessor;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainSpring {
@@ -12,6 +14,8 @@ public class MainSpring {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("/spring.xml");
 		
 		Performer perform = (Performer) ctx.getBean("duke");
+		
+		
 		
 		Poem sonet = new Sonet();
 		Performer duke = new PoeticJuggler(15, sonet );
